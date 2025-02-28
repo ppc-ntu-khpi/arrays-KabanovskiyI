@@ -6,7 +6,12 @@ public class TestResult {
 
     public static void main(String[] args) {
 
-        int R=10;
-        System.out.println("Area of a circle for R="+R+"m is "+Exercise.Calculate(R)+"m"+'\u00B2');
+        int[] numbers = new int[100000];
+        for(int i = 0; i < numbers.length; i++){
+            numbers[i] = i + 1;
+        }
+
+        int excluded = Exercise.count(numbers);
+        System.out.println("Кількість номерів, які потрібно виключити: " + excluded);
     }
 }
